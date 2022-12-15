@@ -3,4 +3,3 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: cnpg-manager
-  namespace: cnpg-system

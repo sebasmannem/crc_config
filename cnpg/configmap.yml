@@ -5,7 +5,6 @@ metadata:
   labels:
     cnpg.io/reload: ""
   name: cnpg-default-monitoring
-  namespace: cnpg-system
 data:
   queries: |
     backends:

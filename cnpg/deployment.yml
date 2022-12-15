@@ -5,7 +5,6 @@ metadata:
   labels:
     app.kubernetes.io/name: cloudnative-pg
   name: cnpg-controller-manager
-  namespace: cnpg-system
 spec:
   replicas: 1
   selector:

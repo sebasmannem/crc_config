@@ -4,4 +4,4 @@ kind: Namespace
 metadata:
   labels:
     app.kubernetes.io/name: cloudnative-pg
-  name: cnpg-system
+  name: cluster-example1
