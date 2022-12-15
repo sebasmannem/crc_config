@@ -11,3 +11,10 @@ spec:
   source:
     path: argocd
     repoURL: https://github.com/sebasmannem/crc_config
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+    - PruneLast=true
