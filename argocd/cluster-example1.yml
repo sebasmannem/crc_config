@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-example1
+  namespace: argocd
+spec:
+  destination:
+    namespace: cluster-example1
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: cluster-example1
+    repoURL: https://github.com/sebasmannem/crc_config
