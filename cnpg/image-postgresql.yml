@@ -1,0 +1,53 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: postgresql
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: ghcr.io/cloudnative-pg/postgresql:11
+    generation: 6
+    importPolicy: {}
+    name: "11"
+    referencePolicy:
+      type: Source
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: ghcr.io/cloudnative-pg/postgresql:12
+    generation: 6
+    importPolicy: {}
+    name: "12"
+    referencePolicy:
+      type: Source
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: ghcr.io/cloudnative-pg/postgresql:13
+    generation: 6
+    importPolicy: {}
+    name: "13"
+    referencePolicy:
+      type: Source
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: ghcr.io/cloudnative-pg/postgresql:14
+    generation: 6
+    importPolicy: {}
+    name: "14"
+    referencePolicy:
+      type: Source
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: ghcr.io/cloudnative-pg/postgresql:15
+    generation: 6
+    importPolicy: {}
+    name: "15"
+    referencePolicy:
+      type: Source

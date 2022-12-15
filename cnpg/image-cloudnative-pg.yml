@@ -1,0 +1,17 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: cloudnative-pg
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: ghcr.io/cloudnative-pg/cloudnative-pg:1.18.0
+    generation: 2
+    importPolicy: {}
+    name: 1.18.0
+    referencePolicy:
+      type: Source
