@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -11000,6 +11001,12 @@ subjects:
   namespace: cnpg-system
 ---
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    cnpg.io/reload: ""
+  name: cnpg-default-monitoring
+  namespace: cnpg-system
 data:
   queries: |
     backends:
@@ -11373,12 +11380,6 @@ data:
         - setting:
             usage: "GAUGE"
             description: "Setting value"
-kind: ConfigMap
-metadata:
-  labels:
-    cnpg.io/reload: ""
-  name: cnpg-default-monitoring
-  namespace: cnpg-system
 ---
 apiVersion: v1
 kind: Service
