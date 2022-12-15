@@ -26,14 +26,14 @@ spec:
         - /manager
         env:
         - name: OPERATOR_IMAGE_NAME
-          value: default-route-openshift-image-registry.apps-crc.testing/cnpg-system/cloudnative-pg:1.18.0
+          value: default-route-openshift-image-registry.apps-crc.testing:5000/cnpg-system/cloudnative-pg:1.18.0
         - name: OPERATOR_NAMESPACE
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
         - name: MONITORING_QUERIES_CONFIGMAP
           value: cnpg-default-monitoring
-        image: default-route-openshift-image-registry.apps-crc.testing/cnpg-system/cloudnative-pg:1.18.0
+        image: default-route-openshift-image-registry.apps-crc.testing:5000/cnpg-system/cloudnative-pg:1.18.0
         livenessProbe:
           httpGet:
             path: /readyz

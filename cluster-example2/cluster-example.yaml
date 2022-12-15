@@ -5,7 +5,7 @@ metadata:
   name: cluster-example2
 spec:
   instances: 3
-  imageName: default-route-openshift-image-registry.apps-crc.testing/cnpg-system/postgresql:15
+  imageName: default-route-openshift-image-registry.apps-crc.testing:5000/cnpg-system/postgresql:15
 
   # Example of rolling update strategy:
   # - unsupervised: automated update of the primary once all
